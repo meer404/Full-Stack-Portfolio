@@ -1,8 +1,121 @@
-body {
-  font-family: 'Readex Pro', sans-serif;
-  background: #f7f8fb;
+/* ============================
+   ADMIN DESIGN SYSTEM
+============================ */
+:root {
+  --admin-bg: #f6f8fc;
+  --admin-sidebar: linear-gradient(180deg, #07090f 0%, #0d1220 100%);
+  --admin-accent: #22c55e;
+  --admin-gold: #f59e0b;
+  --admin-purple: #8b5cf6;
+  --admin-border: rgba(34, 197, 94, 0.18);
 }
 
+.admin-body {
+  font-family: 'Readex Pro', sans-serif;
+  background: var(--admin-bg);
+  background-image:
+    radial-gradient(ellipse 800px 500px at 95% 5%, rgba(34, 197, 94, 0.07) 0%, transparent 55%),
+    radial-gradient(ellipse 600px 400px at 5% 95%, rgba(139, 92, 246, 0.05) 0%, transparent 55%);
+}
+
+/* ============================
+   SIDEBAR
+============================ */
 .sidebar {
-  background: #111827;
+  background: var(--admin-sidebar);
+  border-right: 1px solid var(--admin-border);
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar nav a {
+  transition: all 0.2s ease;
+  border-radius: 0.6rem;
+}
+
+.sidebar nav a:hover {
+  background: rgba(34, 197, 94, 0.12) !important;
+  color: #22c55e;
+  padding-left: 1.25rem;
+}
+
+.sidebar nav a.bg-white\/10 {
+  background: rgba(34, 197, 94, 0.15) !important;
+  color: #22c55e;
+  border-left: 2px solid #22c55e;
+}
+
+/* ============================
+   HEADER
+============================ */
+.admin-header {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(34, 197, 94, 0.15);
+  box-shadow: 0 2px 20px rgba(15, 23, 42, 0.06);
+}
+
+/* ============================
+   CARDS & INPUTS
+============================ */
+.admin-body .bg-white {
+  background: rgba(255, 255, 255, 0.92) !important;
+  border: 1px solid rgba(34, 197, 94, 0.12) !important;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.07) !important;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease !important;
+}
+
+.admin-body .bg-white:hover {
+  border-color: rgba(34, 197, 94, 0.25) !important;
+  box-shadow: 0 12px 40px rgba(15, 23, 42, 0.1) !important;
+}
+
+/* Action buttons */
+.admin-body .bg-teal-500 {
+  background: linear-gradient(125deg, #22c55e, #f59e0b) !important;
+  border: none;
+  box-shadow: 0 6px 18px rgba(34, 197, 94, 0.28);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-body .bg-teal-500:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px rgba(34, 197, 94, 0.35);
+}
+
+.admin-body .text-teal-600 { color: #16a34a; }
+.admin-body .text-red-500  { color: #dc2626; }
+
+/* Form inputs */
+.admin-body input[type="text"],
+.admin-body input[type="email"],
+.admin-body input[type="password"],
+.admin-body input[type="number"],
+.admin-body input[type="url"],
+.admin-body select,
+.admin-body textarea {
+  border-radius: 10px !important;
+  border: 1px solid rgba(34, 197, 94, 0.18) !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+  outline: none !important;
+}
+
+.admin-body input[type="text"]:focus,
+.admin-body input[type="email"]:focus,
+.admin-body input[type="password"]:focus,
+.admin-body input[type="number"]:focus,
+.admin-body input[type="url"]:focus,
+.admin-body select:focus,
+.admin-body textarea:focus {
+  border-color: rgba(34, 197, 94, 0.5) !important;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.08) !important;
+}
+
+/* Tables */
+.admin-body table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.admin-body thead th {
+  background: rgba(34, 197, 94, 0.06);
 }
